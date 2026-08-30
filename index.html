@@ -3,18 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WDS Advogados — Assessoria Jurídica de Excelência</title>
-<meta name="description" content="WDS Advogados — escritório especializado em soluções jurídicas estratégicas, com atendimento personalizado e rigor técnico.">
-
-<!-- ============================================================
-  CONFIGURAÇÃO RÁPIDA
-  - Número do WhatsApp: ver variável WHATSAPP_NUMBER no <script> no final do arquivo.
-  - Imagens esperadas na pasta "imagem/" ao lado deste arquivo:
-      imagem/logo.png       -> logo do escritório (fundo transparente recomendado)
-      imagem/advogado.png   -> foto do advogado (fundo transparente ou recortado recomendado)
-  - Nome do escritório, endereço, e-mail, OAB etc. são dados fictícios
-    de demonstração — substitua pelos dados reais antes de publicar.
-============================================================ -->
+<title>WDS Advogados — OAB/SC 12.602 | Navegantes/SC</title>
+<meta name="description" content="WDS Advogados — OAB/SC 12.602. Atuação em Família e Sucessões, Cível, Trabalhista, Previdenciário, Criminal e Imobiliário. Unidades em Navegantes/SC.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,7 +71,6 @@
     border-radius:2px;
   }
 
-  /* ---------- eyebrow ---------- */
   .eyebrow{
     display:inline-flex;
     align-items:center;
@@ -118,7 +107,7 @@
     background:rgba(10,20,40,0.92);
     backdrop-filter:blur(14px);
     box-shadow:0 8px 32px -12px rgba(0,0,0,0.4);
-    padding:13px 0;
+    padding:14px 0;
   }
   .nav-wrap{
     display:flex;
@@ -128,44 +117,40 @@
   .logo{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:13px;
     color:var(--white);
-  }
-  .logo img{
-    height:44px;
-    width:auto;
-    transition:height .35s var(--ease);
-  }
-  header.scrolled .logo img{ height:36px; }
-  .logo .logo-fallback{
-    display:none;
     font-family:'Cormorant Garamond', serif;
+  }
+  .logo-mark{
+    width:44px; height:44px;
+    flex-shrink:0;
+    object-fit:contain;
+  }
+  .logo-text{
     font-size:23px;
     font-weight:600;
     letter-spacing:0.04em;
     line-height:1;
+    white-space:nowrap;
   }
-  .logo .logo-fallback small{
+  .logo-text small{
     display:block;
     font-family:'Jost', sans-serif;
     font-size:9.5px;
-    letter-spacing:0.32em;
+    letter-spacing:0.3em;
     color:var(--gold-bright);
     font-weight:400;
     margin-top:5px;
     text-transform:uppercase;
   }
-  /* Caso a imagem não carregue, mostra o nome por extenso */
-  .logo img.broken{ display:none; }
-  .logo img.broken + .logo-fallback{ display:block; }
 
   nav.main-nav ul{
     display:flex;
-    gap:40px;
+    gap:36px;
   }
   nav.main-nav a{
     color:rgba(255,255,255,0.82);
-    font-size:14.5px;
+    font-size:14px;
     letter-spacing:0.03em;
     font-weight:400;
     position:relative;
@@ -213,7 +198,7 @@
     position:absolute; left:0;
     width:100%; height:1.5px;
     background:var(--white);
-    transition:transform .35s var(--ease), opacity .3s var(--ease);
+    transition:transform .35s var(--ease), opacity .3s var(--ease), background .3s;
   }
   .burger span:nth-child(1){top:0;}
   .burger span:nth-child(2){top:9px;}
@@ -229,10 +214,10 @@
     display:flex;
     align-items:center;
     background:
-      radial-gradient(ellipse 900px 600px at 82% 12%, rgba(201,169,97,0.10), transparent 60%),
+      radial-gradient(ellipse 900px 600px at 82% 18%, rgba(201,169,97,0.10), transparent 60%),
       linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-deep) 100%);
     overflow:hidden;
-    padding:150px 0 0;
+    padding:150px 0 100px;
   }
   .hero-linework{
     position:absolute;
@@ -246,19 +231,18 @@
     position:relative;
     z-index:2;
     display:grid;
-    grid-template-columns:1.1fr 0.9fr;
-    gap:40px;
-    align-items:end;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
   }
 
-  .hero-copy{ padding-bottom:110px; }
   .hero-copy .eyebrow{margin-bottom:26px;}
 
   .hero h1{
-    font-size:clamp(2.5rem, 4.6vw, 4.1rem);
+    font-size:clamp(2.5rem, 4.4vw, 3.9rem);
     color:var(--white);
     font-weight:600;
-    max-width:15ch;
+    max-width:16ch;
   }
   .hero h1 em{
     font-style:italic;
@@ -267,8 +251,8 @@
   }
   .hero p.lead{
     margin-top:26px;
-    max-width:46ch;
-    font-size:17.5px;
+    max-width:48ch;
+    font-size:17px;
     color:rgba(255,255,255,0.68);
     font-weight:300;
     line-height:1.75;
@@ -312,129 +296,92 @@
   }
   .link-ghost:hover{ color:var(--white); border-color:var(--gold-bright); }
 
-  .hero-stats{
+  .hero-badges{
     margin-top:60px;
     display:flex;
-    gap:48px;
+    gap:14px;
     flex-wrap:wrap;
   }
-  .hero-stats div{ border-left:1px solid var(--navy-line); padding-left:18px; }
-  .hero-stats strong{
-    display:block;
+  .hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    border:1px solid var(--navy-line);
+    padding:11px 18px;
+    font-size:12px;
+    letter-spacing:0.05em;
+    color:rgba(255,255,255,0.72);
+    background:rgba(255,255,255,0.02);
+  }
+  .hero-badge svg{ width:15px; height:15px; color:var(--gold-bright); flex-shrink:0; }
+
+  /* Hero visual — the actual photo */
+  .hero-visual{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero-photo-frame{
+    position:relative;
+    width:100%;
+    max-width:560px;
+  }
+  .hero-photo-frame::before{
+    content:'';
+    position:absolute;
+    top:-18px; left:-18px;
+    right:34px; bottom:34px;
+    border:1px solid var(--navy-line);
+    z-index:1;
+  }
+  .hero-photo-inner{
+    position:relative;
+    aspect-ratio:1717/916;
+    overflow:hidden;
+    z-index:2;
+    box-shadow:0 40px 80px -24px rgba(0,0,0,0.55);
+  }
+  .hero-photo-inner img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center 20%;
+  }
+  .hero-photo-inner::after{
+    content:'';
+    position:absolute; inset:0;
+    background:linear-gradient(200deg, rgba(10,20,40,0) 55%, rgba(10,20,40,0.55) 100%);
+  }
+  .hero-photo-badge{
+    position:absolute;
+    left:24px; bottom:24px;
+    z-index:3;
+    background:rgba(10,20,40,0.82);
+    backdrop-filter:blur(6px);
+    border:1px solid rgba(201,169,97,0.4);
+    padding:12px 20px;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  .hero-photo-badge strong{
     font-family:'Cormorant Garamond', serif;
-    font-size:2.1rem;
+    font-size:1.05rem;
     color:var(--gold-bright);
     font-weight:600;
   }
-  .hero-stats span{
-    font-size:12px;
-    letter-spacing:0.06em;
-    color:rgba(255,255,255,0.55);
+  .hero-photo-badge span{
+    font-size:10.5px;
+    letter-spacing:0.1em;
     text-transform:uppercase;
-  }
-
-  /* Hero — foto do advogado integrada ao fundo */
-  .hero-photo{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-    height:100%;
-    min-height:520px;
-  }
-  .hero-photo .glow-ring{
-    position:absolute;
-    bottom:0;
-    width:78%;
-    aspect-ratio:1/1;
-    border-radius:50%;
-    background:radial-gradient(circle, rgba(201,169,97,0.16), transparent 68%);
-    z-index:1;
-  }
-  .hero-photo .plinth-line{
-    position:absolute;
-    bottom:0;
-    left:8%;
-    right:8%;
-    height:1px;
-    background:linear-gradient(90deg, transparent, var(--navy-line), transparent);
-    z-index:1;
-  }
-  .hero-photo picture, .hero-photo .photo-frame{
-    position:relative;
-    z-index:2;
-    width:88%;
-    max-width:440px;
-    display:flex;
-    justify-content:center;
-  }
-  .hero-photo img{
-    width:100%;
-    height:auto;
-    object-fit:contain;
-    /* funde a base da foto suavemente com o fundo navy */
-    -webkit-mask-image:linear-gradient(to bottom, black 78%, transparent 99%);
-    mask-image:linear-gradient(to bottom, black 78%, transparent 99%);
-    filter:drop-shadow(0 30px 40px rgba(0,0,0,0.45));
-  }
-  .hero-photo img.broken{ display:none; }
-  .hero-photo .photo-placeholder{
-    display:none;
-    width:100%;
-    aspect-ratio:3/4;
-    max-width:380px;
-    border:1px dashed var(--navy-line);
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:rgba(255,255,255,0.35);
-    font-size:12.5px;
-    letter-spacing:0.06em;
-    padding:20px;
-  }
-  .hero-photo img.broken + .photo-placeholder{ display:flex; }
-
-  .hero-photo .frame-deco{
-    position:absolute;
-    z-index:1;
-    border:1px solid var(--navy-line);
-  }
-  .hero-photo .frame-deco.top{ top:8%; left:4%; width:60px; height:60px; border-right:none; border-bottom:none; }
-  .hero-photo .frame-deco.bottom{ bottom:14%; right:2%; width:60px; height:60px; border-left:none; border-top:none; }
-
-  .hero-photo .badge-card{
-    position:absolute;
-    left:0;
-    bottom:16%;
-    z-index:3;
-    background:rgba(10,20,40,0.72);
-    backdrop-filter:blur(10px);
-    border:1px solid var(--navy-line);
-    padding:16px 22px;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    box-shadow:0 20px 40px -16px rgba(0,0,0,0.5);
-  }
-  .hero-photo .badge-card svg{ width:26px; height:26px; color:var(--gold-bright); flex-shrink:0; }
-  .hero-photo .badge-card strong{
-    display:block;
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.2rem;
-    color:var(--white);
-    line-height:1.1;
-  }
-  .hero-photo .badge-card span{
-    font-size:11px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.55);
+    color:rgba(255,255,255,0.65);
   }
 
   .scroll-cue{
-    position:relative;
-    margin:0 auto;
-    padding:26px 0 22px;
+    position:absolute;
+    bottom:36px;
+    left:50%;
+    transform:translateX(-50%);
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -446,7 +393,7 @@
     z-index:3;
   }
   .scroll-cue .line{
-    width:1px; height:30px;
+    width:1px; height:38px;
     background:linear-gradient(var(--gold-bright), transparent);
     animation:scrollLine 2.2s ease-in-out infinite;
   }
@@ -482,6 +429,7 @@
     transition:opacity .8s var(--ease), transform .8s var(--ease);
   }
   .reveal.is-visible{ opacity:1; transform:translateY(0); }
+  .reveal-stagger > *{ transition-delay:calc(var(--i, 0) * 90ms); }
 
   /* ---------- ÁREAS DE ATUAÇÃO ---------- */
   .practice{ background:var(--off-white); }
@@ -599,7 +547,8 @@
   .about-visual::after{
     content:'';
     position:absolute; inset:0;
-    background:radial-gradient(circle at 25% 20%, rgba(201,169,97,0.18), transparent 45%);
+    background:
+      radial-gradient(circle at 25% 20%, rgba(201,169,97,0.18), transparent 45%);
   }
 
   .about-copy .section-head{ margin-bottom:34px; }
@@ -635,6 +584,132 @@
     line-height:1.65;
   }
 
+  /* ---------- EQUIPE ---------- */
+  .team{ background:var(--off-white); }
+  .team-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:34px;
+  }
+  .team-card{
+    background:var(--white);
+    padding:48px 44px;
+    display:flex;
+    align-items:flex-start;
+    gap:28px;
+    border:1px solid rgba(10,20,40,0.07);
+    transition:box-shadow .4s var(--ease), transform .4s var(--ease);
+  }
+  .team-card:hover{
+    box-shadow:var(--shadow-lg);
+    transform:translateY(-6px);
+  }
+  .avatar-mono{
+    width:78px; height:78px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:linear-gradient(160deg, var(--navy-soft), var(--navy-deep));
+    border:1px solid rgba(201,169,97,0.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.7rem;
+    color:var(--gold-bright);
+    font-weight:600;
+  }
+  .team-info h3{
+    font-size:1.55rem;
+    color:var(--navy-deep);
+    margin-bottom:6px;
+  }
+  .team-role{
+    display:block;
+    font-size:11.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    font-weight:500;
+    margin-bottom:12px;
+  }
+  .team-oab{
+    display:inline-block;
+    font-size:13px;
+    color:var(--ink-soft);
+    border-top:1px solid rgba(10,20,40,0.1);
+    padding-top:12px;
+    margin-top:6px;
+  }
+
+  /* ---------- ENDEREÇOS ---------- */
+  .locations{ background:var(--white); }
+  .addr-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:34px;
+  }
+  .addr-card{
+    background:var(--navy-deep);
+    color:var(--white);
+    padding:48px 44px;
+    position:relative;
+    overflow:hidden;
+  }
+  .addr-card::before{
+    content:'';
+    position:absolute;
+    right:-50px; top:-50px;
+    width:180px; height:180px;
+    border:1px solid rgba(201,169,97,0.16);
+    border-radius:50%;
+  }
+  .addr-tag{
+    display:inline-block;
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-bright);
+    border:1px solid rgba(201,169,97,0.4);
+    padding:6px 14px;
+    margin-bottom:22px;
+    position:relative;
+  }
+  .addr-card h3{
+    font-size:1.5rem;
+    color:var(--white);
+    margin-bottom:14px;
+    position:relative;
+  }
+  .addr-card address{
+    font-style:normal;
+    font-weight:300;
+    font-size:15px;
+    line-height:1.85;
+    color:rgba(255,255,255,0.72);
+    position:relative;
+    margin-bottom:28px;
+  }
+  .addr-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    position:relative;
+  }
+  .btn-outline-gold{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    border:1px solid var(--gold);
+    color:var(--gold-bright);
+    padding:11px 20px;
+    font-size:12.5px;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    transition:background .3s var(--ease), color .3s var(--ease);
+  }
+  .btn-outline-gold svg{ width:15px; height:15px; }
+  .btn-outline-gold:hover{ background:var(--gold); color:var(--navy-deep); }
+
   /* ---------- DIFERENCIAIS ---------- */
   .diff{
     background:linear-gradient(180deg, var(--navy-deep), var(--navy) 50%, var(--navy-deep));
@@ -646,7 +721,10 @@
     grid-template-columns:repeat(4, 1fr);
     gap:44px;
   }
-  .diff-item{ text-align:center; padding:0 12px; }
+  .diff-item{
+    text-align:center;
+    padding:0 12px;
+  }
   .diff-index{
     font-family:'Cormorant Garamond', serif;
     font-size:1rem;
@@ -655,9 +733,22 @@
     display:block;
     margin-bottom:22px;
   }
-  .diff-item h3{ font-size:1.5rem; color:var(--white); margin-bottom:14px; }
-  .diff-item p{ font-size:14px; color:rgba(255,255,255,0.58); font-weight:300; line-height:1.75; }
-  .diff-divider{ width:34px; height:1px; background:var(--gold-deep); margin:0 auto 22px; }
+  .diff-item h3{
+    font-size:1.5rem;
+    color:var(--white);
+    margin-bottom:14px;
+  }
+  .diff-item p{
+    font-size:14px;
+    color:rgba(255,255,255,0.58);
+    font-weight:300;
+    line-height:1.75;
+  }
+  .diff-divider{
+    width:34px; height:1px;
+    background:var(--gold-deep);
+    margin:0 auto 22px;
+  }
 
   /* ---------- CONTATO ---------- */
   .contact{ background:var(--off-white); }
@@ -683,7 +774,12 @@
     border:1px solid rgba(201,169,97,0.18);
     border-radius:50%;
   }
-  .contact-info h3{ font-size:1.9rem; color:var(--white); margin-bottom:18px; position:relative; }
+  .contact-info h3{
+    font-size:1.9rem;
+    color:var(--white);
+    margin-bottom:18px;
+    position:relative;
+  }
   .contact-info > p{
     color:rgba(255,255,255,0.62);
     font-weight:300;
@@ -693,11 +789,27 @@
     position:relative;
     max-width:36ch;
   }
-  .contact-line{ display:flex; gap:16px; align-items:flex-start; margin-bottom:26px; position:relative; }
-  .contact-line svg{ width:19px; height:19px; color:var(--gold-bright); margin-top:2px; flex-shrink:0; }
+  .contact-line{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    margin-bottom:26px;
+    position:relative;
+  }
+  .contact-line svg{
+    width:19px; height:19px;
+    color:var(--gold-bright);
+    margin-top:2px;
+    flex-shrink:0;
+  }
   .contact-line strong{
-    display:block; font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
-    color:rgba(255,255,255,0.45); margin-bottom:4px; font-weight:400;
+    display:block;
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.45);
+    margin-bottom:4px;
+    font-weight:400;
   }
   .contact-line span{ font-size:15px; font-weight:300; }
 
@@ -708,25 +820,67 @@
     position:relative;
   }
 
-  .contact-form{ padding:64px 56px; }
-  .contact-form h3{ font-size:1.6rem; color:var(--navy-deep); margin-bottom:10px; }
-  .contact-form > p{ color:var(--ink-soft); font-size:14.5px; font-weight:300; margin-bottom:34px; }
-  .field{ margin-bottom:24px; position:relative; }
+  .contact-form{
+    padding:64px 56px;
+  }
+  .contact-form h3{
+    font-size:1.6rem;
+    color:var(--navy-deep);
+    margin-bottom:10px;
+  }
+  .contact-form > p{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    font-weight:300;
+    margin-bottom:34px;
+  }
+  .field{
+    margin-bottom:24px;
+    position:relative;
+  }
   .field label{
-    display:block; font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
-    color:var(--ink-soft); margin-bottom:9px;
+    display:block;
+    font-size:12px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:9px;
   }
   .field input, .field select, .field textarea{
-    width:100%; border:none; border-bottom:1px solid rgba(10,20,40,0.18);
-    padding:11px 2px; font-family:'Jost', sans-serif; font-size:15px; color:var(--navy-deep);
-    background:transparent; transition:border-color .3s; appearance:none;
+    width:100%;
+    border:none;
+    border-bottom:1px solid rgba(10,20,40,0.18);
+    padding:11px 2px;
+    font-family:'Jost', sans-serif;
+    font-size:15px;
+    color:var(--navy-deep);
+    background:transparent;
+    transition:border-color .3s;
+    appearance:none;
   }
   .field select{ cursor:pointer; }
   .field textarea{ resize:vertical; min-height:80px; }
-  .field input:focus, .field select:focus, .field textarea:focus{ outline:none; border-color:var(--gold); }
-  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-  .btn-gold.full{ width:100%; justify-content:center; margin-top:8px; }
-  .form-note{ font-size:12px; color:var(--ink-soft); margin-top:16px; text-align:center; opacity:0.7; }
+  .field input:focus, .field select:focus, .field textarea:focus{
+    outline:none;
+    border-color:var(--gold);
+  }
+  .field-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  .btn-gold.full{
+    width:100%;
+    justify-content:center;
+    margin-top:8px;
+  }
+  .form-note{
+    font-size:12px;
+    color:var(--ink-soft);
+    margin-top:16px;
+    text-align:center;
+    opacity:0.7;
+  }
 
   /* ---------- FOOTER ---------- */
   footer{
@@ -735,69 +889,144 @@
     padding:70px 0 30px;
     border-top:1px solid rgba(201,169,97,0.12);
   }
-  .footer-grid{ display:grid; grid-template-columns:1.4fr 0.8fr 0.8fr 1fr; gap:50px; padding-bottom:50px; }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 0.8fr 1fr;
+    gap:50px;
+    padding-bottom:50px;
+  }
   .footer-brand .logo{ margin-bottom:20px; }
-  .footer-brand .logo img{ height:40px; }
-  .footer-brand p{ font-size:14px; font-weight:300; line-height:1.75; max-width:32ch; color:rgba(255,255,255,0.45); }
-  .footer-social{ display:flex; gap:14px; margin-top:26px; }
+  .footer-brand p{
+    font-size:14px;
+    font-weight:300;
+    line-height:1.75;
+    max-width:32ch;
+    color:rgba(255,255,255,0.45);
+  }
+  .footer-social{
+    display:flex;
+    gap:14px;
+    margin-top:26px;
+  }
   .footer-social a{
-    width:38px; height:38px; border:1px solid rgba(255,255,255,0.15); border-radius:50%;
-    display:flex; align-items:center; justify-content:center;
+    width:38px; height:38px;
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     transition:border-color .3s, background .3s, transform .3s;
   }
   .footer-social a svg{ width:16px; height:16px; }
   .footer-social a:hover{ border-color:var(--gold); background:rgba(201,169,97,0.1); transform:translateY(-3px); }
 
   footer h5{
-    font-family:'Jost', sans-serif; font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase;
-    color:var(--white); margin-bottom:24px; font-weight:500;
+    font-family:'Jost', sans-serif;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--white);
+    margin-bottom:24px;
+    font-weight:500;
   }
   footer ul li{ margin-bottom:13px; }
-  footer ul a{ font-size:14px; font-weight:300; color:rgba(255,255,255,0.5); transition:color .3s, padding-left .3s; }
+  footer ul a{
+    font-size:14px;
+    font-weight:300;
+    color:rgba(255,255,255,0.5);
+    transition:color .3s, padding-left .3s;
+  }
   footer ul a:hover{ color:var(--gold-bright); padding-left:4px; }
 
   .footer-bottom{
-    padding-top:30px; border-top:1px solid rgba(255,255,255,0.08);
-    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
-    font-size:12.5px; color:rgba(255,255,255,0.35);
+    padding-top:30px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:12.5px;
+    color:rgba(255,255,255,0.35);
   }
   .footer-bottom a{ color:rgba(255,255,255,0.45); }
   .footer-bottom a:hover{ color:var(--gold-bright); }
 
   /* ---------- WHATSAPP FLUTUANTE ---------- */
   .whatsapp-fab{
-    position:fixed; bottom:28px; right:28px; z-index:1500;
-    width:62px; height:62px; border-radius:50%; background:#25D366;
-    display:flex; align-items:center; justify-content:center;
+    position:fixed;
+    bottom:28px;
+    right:28px;
+    z-index:1500;
+    width:62px; height:62px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     box-shadow:0 12px 30px -8px rgba(0,0,0,0.45);
     transition:transform .3s var(--ease), box-shadow .3s var(--ease);
   }
   .whatsapp-fab::before{
-    content:''; position:absolute; inset:0; border-radius:50%; background:#25D366;
-    animation:pulseRing 2.4s ease-out infinite; z-index:-1;
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:#25D366;
+    animation:pulseRing 2.4s ease-out infinite;
+    z-index:-1;
   }
-  @keyframes pulseRing{ 0%{ transform:scale(1); opacity:0.55; } 100%{ transform:scale(1.9); opacity:0; } }
+  @keyframes pulseRing{
+    0%{ transform:scale(1); opacity:0.55; }
+    100%{ transform:scale(1.9); opacity:0; }
+  }
   .whatsapp-fab svg{ width:30px; height:30px; fill:#fff; }
   .whatsapp-fab:hover{ transform:scale(1.08); box-shadow:0 16px 36px -6px rgba(0,0,0,0.55); }
   .whatsapp-fab .wa-tooltip{
-    position:absolute; right:76px; background:var(--navy-deep); color:var(--white);
-    padding:9px 16px; font-size:13px; font-family:'Jost', sans-serif; white-space:nowrap;
-    border-radius:6px; opacity:0; transform:translateX(8px); transition:opacity .3s, transform .3s; pointer-events:none;
+    position:absolute;
+    right:76px;
+    background:var(--navy-deep);
+    color:var(--white);
+    padding:9px 16px;
+    font-size:13px;
+    font-family:'Jost', sans-serif;
+    white-space:nowrap;
+    border-radius:6px;
+    opacity:0;
+    transform:translateX(8px);
+    transition:opacity .3s, transform .3s;
+    pointer-events:none;
   }
   .whatsapp-fab:hover .wa-tooltip{ opacity:1; transform:translateX(0); }
 
   /* ---------- MOBILE NAV OVERLAY ---------- */
   .mobile-nav{
-    position:fixed; inset:0; background:var(--navy-deep); z-index:1100;
-    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:34px;
-    opacity:0; visibility:hidden; transform:translateY(-16px);
+    position:fixed;
+    inset:0;
+    background:var(--navy-deep);
+    z-index:1100;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:30px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-16px);
     transition:opacity .4s var(--ease), transform .4s var(--ease), visibility 0s linear .4s;
+    padding:40px 24px;
+    text-align:center;
   }
   .mobile-nav.open{
     opacity:1; visibility:visible; transform:translateY(0);
     transition:opacity .4s var(--ease), transform .4s var(--ease), visibility 0s;
   }
-  .mobile-nav a{ font-family:'Cormorant Garamond', serif; font-size:2rem; color:var(--white); font-weight:500; }
+  .mobile-nav a{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.8rem;
+    color:var(--white);
+    font-weight:500;
+  }
   .mobile-nav .header-cta{ margin-top:14px; }
 
   /* ---------- RESPONSIVE ---------- */
@@ -807,8 +1036,11 @@
     .diff-grid{ grid-template-columns:1fr 1fr; row-gap:50px; }
     .contact-grid{ grid-template-columns:1fr; }
     .hero-grid{ grid-template-columns:1fr; }
-    .hero-photo{ min-height:380px; margin-top:20px; }
-    .hero-copy{ padding-bottom:40px; text-align:left; }
+    .hero-visual{ order:-1; margin-bottom:10px; }
+    .hero-photo-frame{ max-width:100%; }
+    .team-grid{ grid-template-columns:1fr; }
+    .addr-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
   }
 
   @media (max-width: 860px){
@@ -817,15 +1049,14 @@
     .practice-grid{ grid-template-columns:1fr 1fr; }
     section{ padding:90px 0; }
     .footer-grid{ grid-template-columns:1fr 1fr; gap:40px; }
+    .team-card{ flex-direction:column; }
   }
 
   @media (max-width: 620px){
     .container{ padding:0 22px; }
-    .hero{ padding:120px 0 0; min-height:auto; }
-    .hero-stats{ gap:26px; margin-top:44px; }
-    .hero-stats strong{ font-size:1.5rem; }
-    .hero-photo{ min-height:320px; }
-    .hero-photo .badge-card{ left:50%; transform:translateX(-50%); bottom:6%; padding:12px 18px; }
+    .hero{ padding:130px 0 80px; min-height:auto; }
+    .hero-badges{ gap:10px; }
+    .hero-badge{ font-size:11px; padding:9px 14px; }
     .practice-grid{ grid-template-columns:1fr; }
     .diff-grid{ grid-template-columns:1fr; gap:40px; }
     .about-values{ grid-template-columns:1fr; }
@@ -837,6 +1068,9 @@
     .whatsapp-fab svg{ width:26px; height:26px; }
     section{ padding:70px 0; }
     .section-head{ margin-bottom:48px; }
+    .team-card, .addr-card{ padding:36px 28px; }
+    .logo-text{ font-size:19px; }
+    .logo-mark{ width:38px; height:38px; }
   }
 </style>
 </head>
@@ -848,15 +1082,16 @@
 <header id="siteHeader">
   <div class="container nav-wrap">
     <a href="#topo" class="logo" aria-label="WDS Advogados — página inicial">
-      <img src="imagem/logo.png" alt="WDS Advogados" onerror="this.classList.add('broken')">
-      <span class="logo-fallback">WDS<small>Advogados</small></span>
+      <img src="imagem/logo.png" alt="WDS Advogados" class="logo-mark">
+      <span class="logo-text">WDS<small>Advogados · OAB/SC 12.602</small></span>
     </a>
 
     <nav class="main-nav" aria-label="Navegação principal">
       <ul>
         <li><a href="#areas">Áreas de Atuação</a></li>
         <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#enderecos">Endereços</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -873,7 +1108,8 @@
 <div class="mobile-nav" id="mobileNav">
   <a href="#areas" class="mnav-link">Áreas de Atuação</a>
   <a href="#sobre" class="mnav-link">Sobre</a>
-  <a href="#diferenciais" class="mnav-link">Diferenciais</a>
+  <a href="#equipe" class="mnav-link">Equipe</a>
+  <a href="#enderecos" class="mnav-link">Endereços</a>
   <a href="#contato" class="mnav-link">Contato</a>
   <a href="#" class="header-cta wa-link">Fale Conosco</a>
 </div>
@@ -884,16 +1120,17 @@
 <section class="hero" id="topo">
   <div class="hero-linework" aria-hidden="true">
     <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-      <circle cx="1180" cy="200" r="260" stroke="#C9A961" stroke-opacity="0.10" fill="none"/>
-      <circle cx="1180" cy="200" r="180" stroke="#C9A961" stroke-opacity="0.12" fill="none"/>
+      <circle cx="1180" cy="220" r="260" stroke="#C9A961" stroke-opacity="0.10" fill="none"/>
+      <circle cx="1180" cy="220" r="180" stroke="#C9A961" stroke-opacity="0.12" fill="none"/>
+      <line x1="0" y1="780" x2="1440" y2="780" stroke="#C9A961" stroke-opacity="0.08"/>
     </svg>
   </div>
 
   <div class="container hero-grid">
     <div class="hero-copy reveal is-visible">
-      <span class="eyebrow on-dark">Advocacia Estratégica &amp; Consultiva</span>
-      <h1>Defendendo interesses com <em>rigor técnico</em> e visão estratégica.</h1>
-      <p class="lead">A WDS Advogados oferece assessoria jurídica personalizada para pessoas físicas e empresas que buscam segurança, clareza e resultados consistentes em cada decisão.</p>
+      <span class="eyebrow on-dark">WDS Advogados · OAB/SC 12.602</span>
+      <h1>Defendendo seus direitos com <em>rigor técnico</em> e proximidade real.</h1>
+      <p class="lead">Assessoria jurídica personalizada em Navegantes/SC, com atuação em Família e Sucessões, Cível, Trabalhista, Previdenciário, Criminal e Imobiliário — sempre com clareza, ética e dedicação a cada caso.</p>
 
       <div class="hero-actions">
         <a href="#" class="btn-gold wa-link">
@@ -903,29 +1140,32 @@
         <a href="#areas" class="link-ghost">Conheça as áreas de atuação →</a>
       </div>
 
-      <div class="hero-stats">
-        <div><strong>15+</strong><span>Anos de Atuação</span></div>
-        <div><strong>+900</strong><span>Casos Conduzidos</span></div>
-        <div><strong>98%</strong><span>Satisfação de Clientes</span></div>
+      <div class="hero-badges">
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/></svg>
+          OAB/SC 12.602
+        </span>
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          2 Unidades em Navegantes/SC
+        </span>
+        <span class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          Atendimento Personalizado
+        </span>
       </div>
     </div>
 
-    <div class="hero-photo" aria-hidden="false">
-      <div class="glow-ring"></div>
-      <span class="frame-deco top"></span>
-      <span class="frame-deco bottom"></span>
-      <div class="photo-frame">
-        <img src="imagem/advogado.png" alt="Advogado responsável pela WDS Advogados" onerror="this.classList.add('broken')">
-        <div class="photo-placeholder">Foto do advogado<br>(imagem/advogado.png)</div>
-      </div>
-      <div class="badge-card">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/></svg>
-        <div>
-          <strong>OAB/UF 000.000</strong>
-          <span>Advogado Responsável</span>
+    <div class="hero-visual">
+      <div class="hero-photo-frame reveal is-visible">
+        <div class="hero-photo-inner">
+          <img src="imagem/advogado.png" alt="Advogado WDS Advogados" width="1717" height="916" loading="eager">
+        </div>
+        <div class="hero-photo-badge">
+          <strong>WDS Advogados</strong>
+          <span>OAB/SC 12.602</span>
         </div>
       </div>
-      <div class="plinth-line"></div>
     </div>
   </div>
 
@@ -946,47 +1186,47 @@
       <p>Atuação especializada nas principais frentes do direito, sempre com foco na prevenção de riscos e na defesa qualificada dos interesses do cliente.</p>
     </div>
 
-    <div class="practice-grid">
-      <div class="practice-card reveal">
+    <div class="practice-grid reveal-stagger">
+      <div class="practice-card reveal" style="--i:0">
         <span class="p-num">01</span>
-        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M4 8l8-5 8 5M4 8v9a1 1 0 001 1h4M20 8v9a1 1 0 01-1 1h-4M9 21h6"/></svg>
-        <h3 class="p-title">Direito Empresarial</h3>
-        <p class="p-text">Estruturação societária, contratos, compliance e assessoria contínua para empresas em todas as fases de crescimento.</p>
-      </div>
-
-      <div class="practice-card reveal">
-        <span class="p-num">02</span>
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c-4-3-8-6.5-8-11a5 5 0 0110-1 5 5 0 0110 1c0 4.5-4 8-8 11a1 1 0 01-2 0z"/></svg>
-        <h3 class="p-title">Direito de Família e Sucessões</h3>
-        <p class="p-text">Condução sensível e técnica de divórcios, partilhas, planejamento sucessório e inventários.</p>
+        <h3 class="p-title">Família e Sucessões</h3>
+        <p class="p-text">Condução sensível e técnica de divórcios, partilhas, guarda, pensão alimentícia, planejamento sucessório e inventários.</p>
       </div>
 
-      <div class="practice-card reveal">
+      <div class="practice-card reveal" style="--i:1">
+        <span class="p-num">02</span>
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3 class="p-title">Civil</h3>
+        <p class="p-text">Contratos, responsabilidade civil, cobranças e resolução estratégica de conflitos entre pessoas e empresas.</p>
+      </div>
+
+      <div class="practice-card reveal" style="--i:2">
         <span class="p-num">03</span>
-        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
-        <h3 class="p-title">Direito Imobiliário</h3>
-        <p class="p-text">Due diligence, contratos de compra e venda, regularização e resolução de litígios patrimoniais.</p>
-      </div>
-
-      <div class="practice-card reveal">
-        <span class="p-num">04</span>
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M20 6L9 17l-5-5"/></svg>
-        <h3 class="p-title">Direito Trabalhista</h3>
+        <h3 class="p-title">Trabalhista</h3>
         <p class="p-text">Consultoria preventiva e defesa em processos trabalhistas, para empregadores e empregados.</p>
       </div>
 
-      <div class="practice-card reveal">
-        <span class="p-num">05</span>
-        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        <h3 class="p-title">Direito Civil</h3>
-        <p class="p-text">Responsabilidade civil, contratos, cobranças e resolução estratégica de conflitos.</p>
+      <div class="practice-card reveal" style="--i:3">
+        <span class="p-num">04</span>
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M4 8l8-5 8 5M4 8v9a1 1 0 001 1h4M20 8v9a1 1 0 01-1 1h-4M9 21h6"/></svg>
+        <h3 class="p-title">Previdenciário</h3>
+        <p class="p-text">Aposentadorias, benefícios, revisões e recursos administrativos e judiciais junto ao INSS.</p>
       </div>
 
-      <div class="practice-card reveal">
-        <span class="p-num">06</span>
+      <div class="practice-card reveal" style="--i:4">
+        <span class="p-num">05</span>
         <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-        <h3 class="p-title">Direito Tributário</h3>
-        <p class="p-text">Planejamento fiscal, defesa em autuações e recuperação de créditos tributários.</p>
+        <h3 class="p-title">Criminal</h3>
+        <p class="p-text">Defesa técnica em todas as fases do processo penal, do inquérito à execução da pena.</p>
+      </div>
+
+      <div class="practice-card reveal" style="--i:5">
+        <span class="p-num">06</span>
+        <svg class="p-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+        <h3 class="p-title">Imobiliário</h3>
+        <p class="p-text">Due diligence, contratos de compra e venda, regularização de imóveis e resolução de litígios patrimoniais.</p>
       </div>
     </div>
   </div>
@@ -1002,7 +1242,7 @@
       <div class="quote-block">
         <span class="quote-mark">"</span>
         <blockquote>A confiança do cliente se conquista com transparência, técnica e presença em cada etapa do processo.</blockquote>
-        <cite>Fundadores — WDS Advogados</cite>
+        <cite>WDS Advogados — OAB/SC 12.602</cite>
       </div>
     </div>
 
@@ -1010,7 +1250,7 @@
       <div class="section-head">
         <span class="eyebrow">Sobre o Escritório</span>
         <h2>Tradição jurídica com visão contemporânea</h2>
-        <p>A WDS Advogados é dedicada a oferecer assessoria jurídica de alto nível, combinando profundidade técnica com atendimento próximo e humano. Acreditamos que cada caso é único e merece uma estratégia construída sob medida.</p>
+        <p>A WDS Advogados (OAB/SC 12.602) é um escritório dedicado a oferecer assessoria jurídica de alto nível, combinando profundidade técnica com atendimento próximo e humano. Acreditamos que cada caso é único e merece uma estratégia construída sob medida, conduzida diretamente pelos advogados responsáveis.</p>
       </div>
 
       <div class="about-values">
@@ -1036,6 +1276,94 @@
 </section>
 
 <!-- ============================================================
+     EQUIPE
+============================================================ -->
+<section class="team" id="equipe">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Equipe</span>
+      <h2>Advogados à frente do seu caso</h2>
+      <p>Atendimento direto e pessoal, conduzido pelos próprios advogados responsáveis pela sua causa.</p>
+    </div>
+
+    <div class="team-grid reveal-stagger">
+      <div class="team-card reveal" style="--i:0">
+        <div class="avatar-mono">MS</div>
+        <div class="team-info">
+          <h3>Dra. Merielen Souza</h3>
+          <span class="team-role">Advogada</span>
+          <p class="team-oab">OAB/SC 65.913</p>
+        </div>
+      </div>
+
+      <div class="team-card reveal" style="--i:1">
+        <div class="avatar-mono">JS</div>
+        <div class="team-info">
+          <h3>Dr. Jacson Wan-Dall de Souza</h3>
+          <span class="team-role">Advogado</span>
+          <p class="team-oab">OAB/SC 65.859</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ENDEREÇOS
+============================================================ -->
+<section class="locations" id="enderecos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Endereços</span>
+      <h2>Nossas unidades em Navegantes/SC</h2>
+      <p>Atendimento presencial mediante agendamento prévio em qualquer uma das nossas unidades.</p>
+    </div>
+
+    <div class="addr-grid reveal-stagger">
+      <div class="addr-card reveal" style="--i:0">
+        <span class="addr-tag">Unidade 1</span>
+        <h3>Machados</h3>
+        <address>
+          Rua Raulino Couto, 231 — Machados<br>
+          Navegantes/SC<br>
+          CEP: 88.370-426
+        </address>
+        <div class="addr-actions">
+          <a href="#" class="btn-outline-gold wa-link">
+            Falar no WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Raulino+Couto%2C+231%2C+Machados%2C+Navegantes%2FSC%2C+88370-426" target="_blank" rel="noopener noreferrer" class="btn-outline-gold">
+            Ver no mapa
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="addr-card reveal" style="--i:1">
+        <span class="addr-tag">Unidade 2</span>
+        <h3>Meia Praia</h3>
+        <address>
+          Rua Bernardino Fernandes de Oliveira, 287 — Meia Praia<br>
+          Navegantes/SC<br>
+          CEP: 88.372-078
+        </address>
+        <div class="addr-actions">
+          <a href="#" class="btn-outline-gold wa-link">
+            Falar no WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Rua+Bernardino+Fernandes+de+Oliveira%2C+287%2C+Meia+Praia%2C+Navegantes%2FSC%2C+88372-078" target="_blank" rel="noopener noreferrer" class="btn-outline-gold">
+            Ver no mapa
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      DIFERENCIAIS
 ============================================================ -->
 <section class="diff" id="diferenciais">
@@ -1047,25 +1375,25 @@
     </div>
 
     <div class="diff-grid">
-      <div class="diff-item reveal">
+      <div class="diff-item reveal" style="--i:0">
         <span class="diff-index">I</span>
         <div class="diff-divider"></div>
         <h3>Análise Estratégica</h3>
         <p>Diagnóstico completo antes de qualquer ação, com mapeamento claro de riscos e oportunidades.</p>
       </div>
-      <div class="diff-item reveal">
+      <div class="diff-item reveal" style="--i:1">
         <span class="diff-index">II</span>
         <div class="diff-divider"></div>
         <h3>Comunicação Transparente</h3>
         <p>Atualizações periódicas e linguagem acessível em cada fase do processo.</p>
       </div>
-      <div class="diff-item reveal">
+      <div class="diff-item reveal" style="--i:2">
         <span class="diff-index">III</span>
         <div class="diff-divider"></div>
-        <h3>Rede Multidisciplinar</h3>
-        <p>Parcerias com contadores, peritos e consultores para soluções completas.</p>
+        <h3>Atendimento Direto</h3>
+        <p>Contato direto com os advogados responsáveis, sem intermediários.</p>
       </div>
-      <div class="diff-item reveal">
+      <div class="diff-item reveal" style="--i:3">
         <span class="diff-index">IV</span>
         <div class="diff-divider"></div>
         <h3>Compromisso com Resultado</h3>
@@ -1089,23 +1417,19 @@
     <div class="contact-grid reveal">
       <div class="contact-info">
         <h3>Informações de Contato</h3>
-        <p>Atendimento presencial mediante agendamento e atendimento remoto para todo o Brasil.</p>
+        <p>Atendimento presencial mediante agendamento em nossas duas unidades em Navegantes/SC.</p>
 
         <div class="contact-line">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5a2 2 0 012-2h3l2 5-2 1a11 11 0 006 6l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg>
-          <div><strong>Telefone / WhatsApp</strong><span id="phoneDisplay">(00) 00000-0000</span></div>
-        </div>
-        <div class="contact-line">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 6L12 13 2 6M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z"/></svg>
-          <div><strong>E-mail</strong><span>contato@wdsadvogados.com.br</span></div>
+          <div><strong>WhatsApp</strong><span id="phoneDisplay">(00) 00000-0000</span></div>
         </div>
         <div class="contact-line">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div><strong>Endereço</strong><span>Rua Exemplo, 000 — Centro<br>Cidade / UF</span></div>
+          <div><strong>Unidade 1 — Machados</strong><span>Rua Raulino Couto, 231, Navegantes/SC<br>CEP: 88.370-426</span></div>
         </div>
         <div class="contact-line">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <div><strong>Horário</strong><span>Seg. a Sex. — 9h às 18h</span></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div><strong>Unidade 2 — Meia Praia</strong><span>Rua Bernardino Fernandes de Oliveira, 287, Navegantes/SC<br>CEP: 88.372-078</span></div>
         </div>
 
         <div class="contact-cta-box">
@@ -1135,12 +1459,12 @@
           <div class="field">
             <label for="area">Área de interesse</label>
             <select id="area" name="area">
-              <option>Direito Empresarial</option>
-              <option>Direito de Família e Sucessões</option>
-              <option>Direito Imobiliário</option>
-              <option>Direito Trabalhista</option>
-              <option>Direito Civil</option>
-              <option>Direito Tributário</option>
+              <option>Família e Sucessões</option>
+              <option>Civil</option>
+              <option>Trabalhista</option>
+              <option>Previdenciário</option>
+              <option>Criminal</option>
+              <option>Imobiliário</option>
               <option>Outro assunto</option>
             </select>
           </div>
@@ -1169,13 +1493,11 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#topo" class="logo">
-          <img src="imagem/logo.png" alt="WDS Advogados" onerror="this.classList.add('broken')">
-          <span class="logo-fallback">WDS<small>Advogados</small></span>
+          <img src="imagem/logo.png" alt="WDS Advogados" class="logo-mark">
+          <span class="logo-text">WDS<small>Advogados</small></span>
         </a>
-        <p>Assessoria jurídica estratégica, ética e personalizada para pessoas e empresas.</p>
+        <p>Assessoria jurídica ética, técnica e personalizada. OAB/SC 12.602.</p>
         <div class="footer-social">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="#fff"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/></svg></a>
           <a href="#" class="wa-link" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="M3 5a2 2 0 012-2h3l2 5-2 1a11 11 0 006 6l1-2 5 2v3a2 2 0 01-2 2A16 16 0 013 5z"/></svg></a>
         </div>
       </div>
@@ -1185,18 +1507,9 @@
         <ul>
           <li><a href="#areas">Áreas de Atuação</a></li>
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#enderecos">Endereços</a></li>
           <li><a href="#contato">Contato</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h5>Áreas</h5>
-        <ul>
-          <li><a href="#areas">Empresarial</a></li>
-          <li><a href="#areas">Família e Sucessões</a></li>
-          <li><a href="#areas">Imobiliário</a></li>
-          <li><a href="#areas">Trabalhista</a></li>
         </ul>
       </div>
 
@@ -1204,15 +1517,15 @@
         <h5>Contato</h5>
         <ul>
           <li><a href="#" class="wa-link" id="footerPhone">(00) 00000-0000</a></li>
-          <li><a href="mailto:contato@wdsadvogados.com.br">contato@wdsadvogados.com.br</a></li>
-          <li><a href="#contato">Formulário de contato</a></li>
+          <li>Rua Raulino Couto, 231, Machados, Navegantes/SC</li>
+          <li>Rua Bernardino Fernandes de Oliveira, 287, Meia Praia, Navegantes/SC</li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> WDS Advogados. Todos os direitos reservados.</span>
-      <span>Site institucional — dados de demonstração.</span>
+      <span>© <span id="year"></span> WDS Advogados — OAB/SC 12.602. Todos os direitos reservados.</span>
+      <span>Dra. Merielen Souza OAB/SC 65.913 · Dr. Jacson Wan-Dall de Souza OAB/SC 65.859</span>
     </div>
   </div>
 </footer>
@@ -1234,7 +1547,7 @@
      Formato internacional, apenas números (com DDI + DDD).
      Exemplo: '5511999999999' para +55 11 99999-9999
   ============================================================ */
-  const WHATSAPP_NUMBER = "5547933814831"; // <-- substitua pelo número real
+  const WHATSAPP_NUMBER = "5547933814831"; // <-- substitua pelo número real, se necessário
   const WHATSAPP_DEFAULT_MESSAGE = "Olá! Vim pelo site da WDS Advogados e gostaria de agendar uma consulta.";
 
   function formatDisplayNumber(num){
@@ -1251,21 +1564,25 @@
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
   }
 
+  // Aplica o link a todos os elementos .wa-link
   document.querySelectorAll('.wa-link').forEach(function(el){
     el.setAttribute('href', buildWaLink());
     el.setAttribute('target', '_blank');
     el.setAttribute('rel', 'noopener noreferrer');
   });
 
+  // Exibe número formatado nos locais de exibição
   const display = formatDisplayNumber(WHATSAPP_NUMBER);
   const phoneDisplay = document.getElementById('phoneDisplay');
   const footerPhone = document.getElementById('footerPhone');
   if(phoneDisplay) phoneDisplay.textContent = display;
   if(footerPhone) footerPhone.textContent = display;
 
+  // Ano no footer
   const yearEl = document.getElementById('year');
   if(yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Header ao rolar
   const header = document.getElementById('siteHeader');
   function onScroll(){
     if(window.scrollY > 40){ header.classList.add('scrolled'); }
@@ -1274,6 +1591,7 @@
   window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
 
+  // Menu mobile
   const burger = document.getElementById('burgerBtn');
   const mobileNav = document.getElementById('mobileNav');
   function toggleMenu(open){
@@ -1288,6 +1606,7 @@
     a.addEventListener('click', function(){ toggleMenu(false); });
   });
 
+  // Reveal on scroll
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
@@ -1299,6 +1618,7 @@
   }, { threshold:0.15, rootMargin:'0px 0px -40px 0px' });
   revealEls.forEach(function(el){ io.observe(el); });
 
+  // Formulário -> WhatsApp
   const form = document.getElementById('contactForm');
   if(form){
     form.addEventListener('submit', function(e){
