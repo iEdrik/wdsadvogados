@@ -213,16 +213,20 @@
     min-height:100vh;
     display:flex;
     align-items:center;
-    background:
-      radial-gradient(ellipse 900px 600px at 82% 18%, rgba(201,169,97,0.10), transparent 60%),
-      linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-deep) 100%);
+    background-image:
+      radial-gradient(ellipse 900px 600px at 82% 14%, rgba(201,169,97,0.14), transparent 60%),
+      linear-gradient(180deg, rgba(8,16,32,0.92) 0%, rgba(9,18,36,0.58) 42%, rgba(8,16,32,0.94) 100%),
+      url('imagem/advogado.png');
+    background-repeat:no-repeat;
+    background-position:center, center, center 28%;
+    background-size:auto, auto, cover;
     overflow:hidden;
     padding:150px 0 100px;
   }
   .hero-linework{
     position:absolute;
     inset:0;
-    opacity:0.5;
+    opacity:0.35;
     pointer-events:none;
   }
   .hero-linework svg{ width:100%; height:100%; }
@@ -230,12 +234,10 @@
   .hero-grid{
     position:relative;
     z-index:2;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+    display:flex;
   }
 
+  .hero-copy{ max-width:680px; }
   .hero-copy .eyebrow{margin-bottom:26px;}
 
   .hero h1{
@@ -314,68 +316,6 @@
     background:rgba(255,255,255,0.02);
   }
   .hero-badge svg{ width:15px; height:15px; color:var(--gold-bright); flex-shrink:0; }
-
-  /* Hero visual — the actual photo */
-  .hero-visual{
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .hero-photo-frame{
-    position:relative;
-    width:100%;
-    max-width:560px;
-  }
-  .hero-photo-frame::before{
-    content:'';
-    position:absolute;
-    top:-18px; left:-18px;
-    right:34px; bottom:34px;
-    border:1px solid var(--navy-line);
-    z-index:1;
-  }
-  .hero-photo-inner{
-    position:relative;
-    aspect-ratio:1717/916;
-    overflow:hidden;
-    z-index:2;
-    box-shadow:0 40px 80px -24px rgba(0,0,0,0.55);
-  }
-  .hero-photo-inner img{
-    width:100%; height:100%;
-    object-fit:cover;
-    object-position:center 20%;
-  }
-  .hero-photo-inner::after{
-    content:'';
-    position:absolute; inset:0;
-    background:linear-gradient(200deg, rgba(10,20,40,0) 55%, rgba(10,20,40,0.55) 100%);
-  }
-  .hero-photo-badge{
-    position:absolute;
-    left:24px; bottom:24px;
-    z-index:3;
-    background:rgba(10,20,40,0.82);
-    backdrop-filter:blur(6px);
-    border:1px solid rgba(201,169,97,0.4);
-    padding:12px 20px;
-    display:flex;
-    flex-direction:column;
-    gap:2px;
-  }
-  .hero-photo-badge strong{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.05rem;
-    color:var(--gold-bright);
-    font-weight:600;
-  }
-  .hero-photo-badge span{
-    font-size:10.5px;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    color:rgba(255,255,255,0.65);
-  }
 
   .scroll-cue{
     position:absolute;
@@ -593,10 +533,9 @@
   }
   .team-card{
     background:var(--white);
-    padding:48px 44px;
+    padding:28px 28px 38px;
     display:flex;
-    align-items:flex-start;
-    gap:28px;
+    flex-direction:column;
     border:1px solid rgba(10,20,40,0.07);
     transition:box-shadow .4s var(--ease), transform .4s var(--ease);
   }
@@ -604,19 +543,27 @@
     box-shadow:var(--shadow-lg);
     transform:translateY(-6px);
   }
-  .avatar-mono{
-    width:78px; height:78px;
-    flex-shrink:0;
-    border-radius:50%;
+  .team-photo{
+    position:relative;
+    width:100%;
+    aspect-ratio:4/5;
+    overflow:hidden;
+    margin-bottom:30px;
     background:linear-gradient(160deg, var(--navy-soft), var(--navy-deep));
-    border:1px solid rgba(201,169,97,0.4);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.7rem;
-    color:var(--gold-bright);
-    font-weight:600;
+  }
+  .team-photo img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+    transition:transform .6s var(--ease);
+  }
+  .team-card:hover .team-photo img{ transform:scale(1.04); }
+  .team-photo::after{
+    content:'';
+    position:absolute; inset:12px;
+    border:1px solid rgba(201,169,97,0.45);
+    pointer-events:none;
   }
   .team-info h3{
     font-size:1.55rem;
@@ -1035,9 +982,6 @@
     .about-visual{ aspect-ratio:16/9; }
     .diff-grid{ grid-template-columns:1fr 1fr; row-gap:50px; }
     .contact-grid{ grid-template-columns:1fr; }
-    .hero-grid{ grid-template-columns:1fr; }
-    .hero-visual{ order:-1; margin-bottom:10px; }
-    .hero-photo-frame{ max-width:100%; }
     .team-grid{ grid-template-columns:1fr; }
     .addr-grid{ grid-template-columns:1fr; }
     .footer-grid{ grid-template-columns:1fr 1fr; }
@@ -1153,18 +1097,6 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
           Atendimento Personalizado
         </span>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="hero-photo-frame reveal is-visible">
-        <div class="hero-photo-inner">
-          <img src="imagem/advogado.png" alt="Advogado WDS Advogados" width="1717" height="916" loading="eager">
-        </div>
-        <div class="hero-photo-badge">
-          <strong>WDS Advogados</strong>
-          <span>OAB/SC 12.602</span>
-        </div>
       </div>
     </div>
   </div>
@@ -1288,7 +1220,9 @@
 
     <div class="team-grid reveal-stagger">
       <div class="team-card reveal" style="--i:0">
-        <div class="avatar-mono">MS</div>
+        <div class="team-photo">
+          <img src="imagem/adv1.png" alt="Dra. Merielen Souza — Advogada OAB/SC 65.913" loading="lazy">
+        </div>
         <div class="team-info">
           <h3>Dra. Merielen Souza</h3>
           <span class="team-role">Advogada</span>
@@ -1297,7 +1231,9 @@
       </div>
 
       <div class="team-card reveal" style="--i:1">
-        <div class="avatar-mono">JS</div>
+        <div class="team-photo">
+          <img src="imagem/adv2.png" alt="Dr. Jacson Wan-Dall de Souza — Advogado OAB/SC 65.859" loading="lazy">
+        </div>
         <div class="team-info">
           <h3>Dr. Jacson Wan-Dall de Souza</h3>
           <span class="team-role">Advogado</span>
@@ -1639,5 +1575,14 @@
 })();
 </script>
 
+<!-- ============================================================
+     DIMENSÕES RECOMENDADAS DE IMAGEM
+     - imagem/advogado.png (fundo do Hero): 1717x916px (já fornecida, proporção ~1.87:1).
+       Ocupa a largura total da tela via background-size: cover, sem distorção.
+     - imagem/adv1.png (Dra. Merielen Souza) e imagem/adv2.png (Dr. Jacson Wan-Dall de Souza):
+       Proporção retrato 4:5. Recomendado 1000x1250px (mínimo 800x1000px) para boa
+       nitidez em telas retina, enquadramento vertical, rosto/tronco centralizado
+       e boa margem para o corte automático via object-fit: cover.
+============================================================ -->
 </body>
 </html>
